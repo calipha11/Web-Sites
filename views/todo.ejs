@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Todo List</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/stylesheets/todo.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+	    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
+    </head>
+    <body>
+
+<div id="container">
+	<h1>To-do List <i class="fa fa-plus" aria-hidden="true"></i></h1>
+	<input type="text" placeholder="Add New Todo">
+
+	<ul>
+		<li><span><i class="fa fa-trash"></i></span> Walk the dog</li>
+		<li><span><i class="fa fa-trash"></i></span> Buy groceries</li>
+		<li><span><i class="fa fa-trash"></i></span> Pick up dry cleaning</li>
+	</ul>
+</div>
+
+<script type="text/javascript" src="/js/todo.js"></script>
+
+<% include partials/footer %>
