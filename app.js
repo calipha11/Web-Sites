@@ -13,7 +13,7 @@ app.get("/projects", function(req, res){
     var projects = [
         {name: "Todo App", image: "https://static.comicvine.com/uploads/original/8/82727/1525513-the_moutain____by_vincentfavre.jpg", link: "/todo"},
         {name: "p3", image: "https://media-cdn.tripadvisor.com/media/photo-s/0e/34/36/55/svanati-moutain.jpg"}
-    ]
+    ];
    res.render("projects", {projects: projects}); 
 });
 
@@ -39,6 +39,10 @@ app.get("/todoabout", function(req, res){
 
 app.get("/campsite", function(req, res){
    res.render("campsite"); 
+});
+
+app.get("/weather", function(req, res){
+   res.render("weather"); 
 });
 
 app.listen(process.env.PORT, process.env.IP, function(){
