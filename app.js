@@ -45,6 +45,10 @@ app.get("/weather", function(req, res){
    res.render("weather"); 
 });
 
+app.get("/twitchtv", function(req, res){
+    res.render("twitchtv");
+});
+
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log("the port_site server has started");
 });
