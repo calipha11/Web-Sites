@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator App</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="/stylesheets/pomodoro.css">
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.js"
+            integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+            crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.js"></script>
+
+    </head>
+    <body>
+
+<div class="container">
+    <h2>Pomodoro Clock</h2>
+    <div class="row">
+        <div class="col">
+            <p>Break Length</p>
+            <div class="plusbreak">+</div><div class="breaklength">5</div><div class="minusbreak">-</div>
+        </div>
+        <div class="col">
+            <p>Session Length</p>
+            <div class="plussession">+</div><div class="sessionlength">25</div><div class="minussession">-</div>
+        </div>
+    
+    
+    <button id="startbutton">Start Button</button>
+    
+    <button id="stopbutton">Stop Button</button>
+    
+    <button id="newInterval">New Interval</button>
+    
+    <div class="circle timer"><p id="demo">Time</p></div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/js/pomodoro.js"></script>
+
+    </body>
+</html>

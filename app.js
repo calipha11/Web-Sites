@@ -49,6 +49,22 @@ app.get("/twitchtv", function(req, res){
     res.render("twitchtv");
 });
 
+app.get("/calc_app", function(req, res){
+    res.render("calcapp"); 
+});
+
+app.get("/calculator", function(req, res){
+    res.render("calculator");
+});
+
+app.get("/pomodoro_app", function(req, res){
+    res.render("pomodoro_app");
+});
+
+app.get("/pomodoro", function(req, res){
+    res.render("pomodoro");
+});
+
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log("the port_site server has started");
 });

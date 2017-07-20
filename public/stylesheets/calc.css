@@ -1,0 +1,23 @@
+.calculator {
+    width: 200px;
+    background-color: #d7dae0;
+	box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
+}
+
+.view {
+    width: 170px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+input {
+    background-color: white;
+}
+
+body {
+    background-color: grey;
+}
+
+#clear {
+    background-color: #e86868;
+}
