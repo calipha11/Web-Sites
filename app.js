@@ -65,6 +65,14 @@ app.get("/pomodoro", function(req, res){
     res.render("pomodoro");
 });
 
+app.get("/tictactoeapp", function(req, res){
+    res.render("tictactoeapp");
+});
+
+app.get("/tictactoe", function(req, res){
+   res.render("tictactoe"); 
+});
+
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log("the port_site server has started");
 });
