@@ -73,6 +73,14 @@ app.get("/tictactoe", function(req, res){
    res.render("tictactoe"); 
 });
 
+app.get("/simongameapp", function(req, res){
+    res.render("simongameapp");
+});
+
+app.get("/simongame", function(req, res){
+    res.render("simongame");
+});
+
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log("the port_site server has started");
 });
