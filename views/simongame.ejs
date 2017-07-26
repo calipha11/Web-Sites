@@ -14,24 +14,37 @@
     </head>
     <body>
         
-<button id="start">Start</button>
-
-<input type="button" value="button" class="blue">
-<input type="button" value="button" class="green">
-<input type="button" value="button" class="yellow">
-<input type="button" value="button" class="red">
-<p>Strict</p><input type="checkbox" value="Strict" id="strictcheckbox">
-<input type="button" value="Reset" id="reset">
-
-<p>Count: </p><p id="count">--</p>
-
-<p id="status">--</p>
-
 <p id="dummyBlue"></p>
 <p id="dummyGreen"></p>
 <p id="dummyYellow"></p>
 <p id="dummyRed"></p>
 <p id="strictStart"></p>
+
+<div class="game"></div>
+<div id="circle1" class="blue inline"></div>
+<div id="circle2" class="green inline"></div>
+</div>
+<div class="game">
+<div id="circle3" class="yellow inline"></div>
+<div id="circle4" class="red inline"></div>
+</div>
+
+<div id="circle">
+    <div class="wrapcontent">
+        <div class="row">
+            <h3>Simon Game</h3>
+        </div>
+        <div class="row">
+            <button id="start" class="firstRow">Start</button>
+            <p class="firstRow">Strict</p>   <input type="checkbox" class="firstRow" value="Strict" id="strictcheckbox">
+        </div>
+        <div class="row">
+            <input type="button" class="firstRow" value="Reset" id="reset">
+            <p class="firstRow">Count: </p><p id="count" class="firstRow">--</p>
+            <p id="status" class="firstRow">--</p>
+        </div>
+    </div>
+</div>
 
 <script type="text/javascript" src="/js/simongame.js"></script>
     </body>

@@ -1,3 +1,11 @@
+p {
+    color: white;
+}
+
+h3 {
+    color: white;
+}
+
 .highlight {
     background-color: purple;
     opacity: 0.5;
@@ -17,4 +25,71 @@
 
 .red {
     background-color: red;
+}
+
+#circle1 {
+    background: green;
+    width: 200px;
+    height: 200px;
+    /*border-radius: 50%;*/
+    border-top-left-radius: 100%;
+    display: inline-block;
+}
+
+#circle2 {
+    background: red;
+    width: 200px;
+    height: 200px;
+    /*border-radius: 50%;*/
+    border-top-right-radius: 100%;
+    display: inline-block;
+}
+
+#circle3 {
+    background: yellow;
+    width: 200px;
+    height: 200px;
+    /*border-radius: 50%;*/
+    border-bottom-left-radius: 100%;
+    display: inline-block;
+}
+
+#circle4 {
+    background: blue;
+    width: 200px;
+    height: 200px;
+    /*border-radius: 50%;*/
+    border-bottom-right-radius: 100%;
+    display: inline-block;
+}
+
+.game {
+    position: relative;
+    top: 50%;
+}
+
+#circle {
+    background: black;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: absolute;
+    left: 100px;
+    top: 110px;
+}
+
+.row {
+    width: 100%;
+    text-align: center;
+}
+
+.firstRow {
+    display: inline-block;
+}
+
+.wrapcontent {
+    vertical-align: middle;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 30px;
 }
