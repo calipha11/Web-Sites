@@ -166,6 +166,9 @@ $("#start").on("click", function(){
     seq.push(Math.floor((Math.random() * 4)));
     $("#count").text(seq.length);
     $("#status").text(" ");
+    if(seq.length == 21){
+        $("#status").text("You won!");
+    }
     for(var j = 0; j < seq.length + 1; j++){
         if(seq[j] == 0){
             setTimeout(function(){
