@@ -81,6 +81,23 @@ app.get("/simongame", function(req, res){
     res.render("simongame");
 });
 
+app.get("/timestampapp", function(req, res){
+    res.render("timestampapp");
+});
+
+app.get("/timestamp", function(req, res){
+    res.render("timestamp");
+});
+
+app.get("/timestamp/:input", function(req, res){
+    var d = new Date(+(req.params.input));
+    var e = {"unix": +d, "natural": d.toDateString()};
+    if(e.natural == 'Invalid Date'){
+        e.natural = null;
+    }
+    res.render("timestampOutput", {date: e});
+});
+
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log("the port_site server has started");
 });
