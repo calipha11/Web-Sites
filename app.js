@@ -98,6 +98,14 @@ app.get("/timestamp/:input", function(req, res){
     res.render("timestampOutput", {date: e});
 });
 
+app.get("/requestheaderapp", function(req, res){
+   res.render("requestheaderapp"); 
+});
+
+app.get("/requestheader", function(req, res){
+    res.render("requestheader");
+});
+
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log("the port_site server has started");
 });

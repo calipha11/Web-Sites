@@ -1,0 +1,20 @@
+<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+
+<p></p>
+
+<script type="text/javascript">
+    var userLang = navigator.language || navigator.userLanguage;
+    var software = navigator.appVersion;
+    
+    $.getJSON('//freegeoip.net/json/?callback=?', function(data) {
+        var b = { 
+                "ipaddress": data.ip,
+                "language": userLang,
+                "software": software
+        }
+        document.querySelector("p").innerHTML = JSON.stringify(b);
+    });
+</script>
+
+
+
