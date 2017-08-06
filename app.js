@@ -1,5 +1,9 @@
-var express = require("express");
-var app = express();
+var express     = require("express"),
+    Link        = require("./models/links"),
+    mongoose    = require("mongoose"),
+    app         = express();
+
+mongoose.connect("mongodb://localhost/short_url_app");    
 
 app.set("view engine", "ejs");
 
@@ -104,6 +108,43 @@ app.get("/requestheaderapp", function(req, res){
 
 app.get("/requestheader", function(req, res){
     res.render("requestheader");
+});
+
+app.get("/urlshortenerapp", function(req, res){
+    res.render("urlshortenerapp");
+});
+
+app.get("/urlshortener", function(req, res){
+    res.render("urlshortener");
+});
+
+app.get("/urlshortener/new/*", function(req, res){
+    var url = req.params[0];
+    console.log(req.rawHeaders[1]);
+    var rand = Math.floor(Math.random()*1000);
+        
+    var newLink = {original_url: url, short_url: 'https://' + req.rawHeaders[1] + '/' + 'urlshortener' + "/" + JSON.stringify(rand), tag: JSON.stringify(rand)};
+        
+    Link.create(newLink, function(err, newlyCreated){
+        if(err){
+            console.log(err);
+        } else {
+            console.log(newlyCreated);
+            res.render("output", {newLink: newLink});
+        }
+    });
+});
+
+app.get("/urlshortener/:tag", function(req, res){
+    Link.find({tag: req.params.tag}).exec(function(err, foundLink){
+        if(err){
+            console.log(err);
+        } else {
+            var link = foundLink[0].original_url;
+            console.log(link);
+            res.redirect(link);
+        }
+    });
 });
 
 app.listen(process.env.PORT, process.env.IP, function(){
