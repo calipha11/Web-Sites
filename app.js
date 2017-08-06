@@ -3,8 +3,8 @@ var express     = require("express"),
     mongoose    = require("mongoose"),
     app         = express();
 
-mongoose.connect(process.env.DATABASEURL);    
-// mongoose.connect("mongodb://port_site:Fredrick0@ds133231.mlab.com:33231/portfolio_site");    
+var url = process.env.DATABASEURL || "mongodb://localhost/short_url_app";
+mongoose.connect(url);    
 
 console.log(process.env.DATABASEURL);
 
