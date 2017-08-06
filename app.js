@@ -3,7 +3,8 @@ var express     = require("express"),
     mongoose    = require("mongoose"),
     app         = express();
 
-mongoose.connect("mongodb://localhost/short_url_app");    
+// mongoose.connect("mongodb://localhost/short_url_app");    
+mongoose.connect("mongodb://port_site:Fredrick0@ds133231.mlab.com:33231/portfolio_site");    
 
 app.set("view engine", "ejs");
 
