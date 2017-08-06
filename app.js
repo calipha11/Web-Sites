@@ -3,8 +3,10 @@ var express     = require("express"),
     mongoose    = require("mongoose"),
     app         = express();
 
-// mongoose.connect("mongodb://localhost/short_url_app");    
-mongoose.connect("mongodb://port_site:Fredrick0@ds133231.mlab.com:33231/portfolio_site");    
+mongoose.connect(process.env.DATABASEURL);    
+// mongoose.connect("mongodb://port_site:Fredrick0@ds133231.mlab.com:33231/portfolio_site");    
+
+console.log(process.env.DATABASEURL);
 
 app.set("view engine", "ejs");
 
