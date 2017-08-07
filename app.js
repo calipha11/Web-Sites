@@ -1,6 +1,8 @@
 var express     = require("express"),
     Link        = require("./models/links"),
     mongoose    = require("mongoose"),
+    multer      = require("multer"),
+    upload      = multer({ dest: 'uploads/' }),
     app         = express();
 
 var url = process.env.DATABASEURL || "mongodb://localhost/short_url_app";
@@ -146,6 +148,20 @@ app.get("/urlshortener/:tag", function(req, res){
             res.redirect(link);
         }
     });
+});
+
+app.get("/filesizeapp", function(req, res){
+    res.render("filesizeapp");
+});
+
+app.get("/filesize", function(req, res){
+    res.render("filesize");
+});
+
+app.post("/filesize/get-file", upload.single('file'), function(req, res, next){
+   var a = {"size": req.file.size};
+   var b = JSON.stringify(a);
+   res.send(b);
 });
 
 app.listen(process.env.PORT, process.env.IP, function(){
