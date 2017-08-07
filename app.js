@@ -3,7 +3,8 @@ var express     = require("express"),
     mongoose    = require("mongoose"),
     app         = express();
 
-mongoose.connect("mongodb://localhost/short_url_app");    
+var url = process.env.DATABASEURL || "mongodb://localhost/short_url_app";
+mongoose.connect(url);    
 
 app.set("view engine", "ejs");
 
