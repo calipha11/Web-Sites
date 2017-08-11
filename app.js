@@ -164,6 +164,10 @@ app.post("/filesize/get-file", upload.single('file'), function(req, res, next){
    res.send(b);
 });
 
+app.get("/votingapp", function(req, res){
+    res.render("votingapp");
+});
+
 app.listen(process.env.PORT, process.env.IP, function(){
     console.log("the port_site server has started");
 });
